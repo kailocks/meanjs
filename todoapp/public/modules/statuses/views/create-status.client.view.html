@@ -1,0 +1,58 @@
+<section data-ng-init="find()">
+    <div class="page-header">
+        <h1>New Status</h1>
+    </div>
+    <!-- <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="name">Name</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="Name" required>
+                    </div>
+                    <label class="control-label" for="email">Email</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="email" id="email" class="form-control" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div> -->
+    <div class="container" data-ng-controller="StatusesController" data-ng-init="find()">
+    <h1>Contact List App</h1>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>         
+          <th>Email</th>
+          <th>Number</th>
+          <th>Action</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input class="form-control" ng-model="name" data-ng-bind="status.name"></input></td>
+          <td><input class="form-control" ng-model="email"></input></td>
+          <td><button class="btn btn-primary" ng-click="create()">Add Contact</button></td>
+          <td><button class="btn btn-info" ng-click="deselect()">Clear</button></td>
+        </tr>
+        <!-- <tr ng-repeat="contact in statuses">
+          <td>{{contact.name}}</td>
+          <td>{{contact.email}}</td>
+          <td><button type="button" class="btn btn-info" ng-click="findOne(contact._id)">Edit</button></td>
+        </tr> -->
+      </tbody>
+    </table>
+
+  </div>
+   
+</section>
+
